@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 신촌 맛집 빙고</title>
+    </head>
+    <body>
+        <h1>
+            신촌 맛집
+        </h1>
+        <p>신촌 맛집을 주제로 만든 빙고입니다.</p>
+        <table border="1">
+            <tr><!--첫번째 줄 시작-->
+            <td> 대포찜닭</td>
+            <td> 가마마루이 라멘</td>
+            <td> 카미야</td>
+        </tr><!--첫번쨰 줄 끝-->
+        <tr><!--두번째 줄 시작-->
+            <td> 미가분식</td>
+            <td> 꼬숑돈까스</td>
+            <td> 카라멘야</td>
+        </tr><!--두번째 줄 끝-->
+        <tr><!--세번째 줄 시작-->
+            <td> 셀리스도넛</td>
+            <td> <mark>한창희의 천하일면</mark></td>
+            <td> <b><u>강남불백</u></b></td>
+        </tr><!--세번째 줄 끝-->
+        </table>
+    </br>
+        <p style="font-size:1"> 이번 차례에 체크할 맛집:
+        <input type="text" id="userInput" placeholder="맛집이름을 입력하세요." onkeydown="handleKeyDown(event)">
+        <input type="submit" value="Submit">
+        <div id="output"></div>
+        <script>
+            function handleKeyDown(event){
+                if(event.key === "Enter"){
+                    var userInput = document.getElementById("userInput").value.toLowerCase();
+                    var outputDiv = document.getElementById("output");
+                    outputDiv.innerHTML += userInput + " 지움" + "<br>";
+
+                   
+                        }
+            }
+        </script>
+        </p>
+    </body>
+</html>
